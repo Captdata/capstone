@@ -1,19 +1,12 @@
 html {
   font-size: 16px;
-  font-family: sans-serif;
-  color: darkslategray;
+  font-family: 'Cabin',sans-serif;
+  color: #051d22;
+  background-color: #EBFFEB;
 }
-
 strong {
   font-weight: bold;
-}
-
-/*                 Multi-Section Code         */
-.container {
-  max-width: 100%;
-  padding: 2rem 1.5rem;
-  display: flex;
-  align-items: center;
+  color: #051d22
 }
 h2 {
   font-size: 2.5rem;
@@ -27,16 +20,38 @@ p {
   line-height: 1.5rem;
 }
 
-/* ------------------- HEADER ------------- */
+/* ------------------- Multi-Section Code ------------------ */
+
+.banner, .learning, .fisma, .campus {
+  background-color: #327f8E;
+}
+.newyork,.info-right {
+  border-left: 1px solid #327f8E;
+}
+.guest, .newyork{
+  border-bottom: 1px solid #327f8E;
+}
+.course img, .logo img, .banner-img img, .info-left img {
+  width: 100%;
+  height: auto;
+}
+.info-text a, footer a {
+  color: #E7974E;
+}
+
+/* ------------------- HEADER ------------------ */
 header {
   height: 4rem;
   display: flex;
   justify-content: space-between;
+  background-color: white;
   align-items: center;
   position: fixed;
   z-index: 20;
-  background-color: white;
   width: 100%;
+}
+header span {
+  color: #236773;
 }
 .logo {
   margin-left: 1.5rem;
@@ -45,14 +60,7 @@ header {
   justify-content: flex-start;
   align-items: center;
   font-size: 1.35rem;
-  color: gray;
-}
-.logo strong, nav ul li a {
-  color:darkslategray;
-}
-.logo img {
-  height: 100%;
-  width: auto;
+  font-family: 'Orbitron',sans-serif;
 }
 nav {
   font-size: 1.25rem;
@@ -65,12 +73,11 @@ nav ul {
 }
 nav ul li {
   padding-left: 1rem;
-  color:darkslategray;
 }
 .phone-nav {
   display:none;
 }
-/*       Mobile Responsiveness for Header section      */
+/* --------  Mobile Responsiveness for Header section -------- */
 @media screen and (max-width: 711px) {
   .desk-nav ,.logo{
     display: none;
@@ -87,37 +94,33 @@ nav ul li {
   }
 }
 
-
-/*                 Banner Section             */
+/* ------------------- Banner ------------------ */
 .banner {
-  color: darkslategray;
-  background-color: lightgray;
-  padding-top: 4rem;
+  max-width: 100%;
+  padding: 6rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  align-items: center;
 }
 .banner-img {
   max-width: 60%;
-}
-.banner-img img{
-  height: auto;
-  width: 100%;
 }
 .banner-text {
   max-width: 30%;
   padding-left: 1.5rem;
 }
 .banner .button {
-  background-color: darkslategray;
-  color: white;
+  color: #EBFFEB;
   padding: .5rem;
   max-width: 100%;
   text-align: center;
   font-size: 1.25rem;
+  background-color: #0b3239;
 }
 .banner-text h3 {
   font-size: 1.5rem;
   padding: 1.5rem 0;
 }
-/*       Mobile Responsiveness for Banner section      */
+/* --------  Mobile Responsiveness for Banner section -------- */
 @media screen and (max-width:1140px) {
   .banner-text {
     max-width: 35%;
@@ -132,11 +135,9 @@ nav ul li {
   }
 }
 @media screen and (max-width: 695px) {
-  .container {
+  .banner {
     flex-direction: column;
     justify-content: center;
-  }
-  .banner {
     padding: 4rem 0 0 0;
   }
   .banner-img, .banner-text {
@@ -144,7 +145,6 @@ nav ul li {
   }
   .banner .button {
     max-width: 100%;
-    background-color: darkgray;
   }
   .banner-text {
     padding: 2rem 1rem;
@@ -155,7 +155,7 @@ nav ul li {
   }
 }
 
-/*                Information Section               */
+/* ------------------- Information ------------------ */
 .information {
   display: flex;
   justify-content: space-between;
@@ -166,10 +166,6 @@ nav ul li {
   max-width: 58%;
   max-height: 100%;
   padding: 2rem 1.5rem;
-}
-.info-left img {
-  height: auto;
-  width: 100%;
 }
 .info-left-text h2 {
   padding: 2rem 0 1.5rem 0;
@@ -184,7 +180,7 @@ nav ul li {
 .info-right {
   max-width: 40%;
   max-height: 100%;
-  border-left: 1px solid lightgray;
+
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -203,7 +199,6 @@ nav ul li {
   display: none;
 }
 .orient {
-  border-bottom: 1px solid lightgray;
   padding-top: 0;
 }
 .info-text {
@@ -213,16 +208,10 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
 }
-.guest {
-  background-color: lightgray;
-}
 .info-text p {
   padding: 8px 0;
 }
-.info-text a {
-  color: blue;
-}
-/*       Mobile Responsiveness for Information section      */
+/* --------  Mobile Responsiveness for Information section -------- */
 @media screen and (max-width: 1090px) {
   .info-left-text h2 {
     font-size: 2rem;
@@ -269,16 +258,14 @@ nav ul li {
   }
 }
 
-/*           ------------ Learning/Course Section -------- */
+/* ------------------- Learning/Courses ------------------ */
 .learning {
   max-width: 100%;
   padding: 2rem 3.5rem;
-  background-color: lightgray;
 }
 .learn-top h2 {
   text-align: center;
   padding-bottom: 2rem;
-  color: darkslategray;
 }
 .courses {
   display: flex;
@@ -287,13 +274,10 @@ nav ul li {
   align-items: center;
 }
 .course {
-  background-color: white;
   max-width: 30%;
   margin: 1rem;
-}
-.course img {
-  width: 100%;
-  height: auto;
+  color: #EBFFEB;
+  background-color: #0b3239;
 }
 .course-text {
   padding: 1rem;
@@ -305,7 +289,7 @@ nav ul li {
 .course-text h6 {
   padding: .5rem 0;
 }
-/*           Mobile Responsiveness for Learning Section       */
+/* --------  Mobile Responsiveness for Learning section -------- */
 @media screen and (max-width: 995px) {
   .course-text h6,.course-text p {
     display: none;
@@ -318,7 +302,7 @@ nav ul li {
 @media screen and (max-width: 695px) {
   .learning {
     background-color: inherit;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #327f8E;
     padding: 2rem 0;
   }
   .learn-top h2{
@@ -329,10 +313,11 @@ nav ul li {
     padding: 1rem;
   }
   .course {
-    background-color: lightgray;
     max-width: 100%;
     width: 100%;
     margin: .5rem 0;
+    background-color: #0b3239;
+    color: #EBFFEB;;
   }
   .course img{
     display: none;
@@ -342,7 +327,7 @@ nav ul li {
     text-align: left;
   }
 }
-/*                 Thesis Section          */
+/* ------------------- Thesis  ------------------ */
 .thesis-main {
   max-width: 100%;
   margin: 2rem 0 2rem 1.5rem;
@@ -378,7 +363,7 @@ nav ul li {
 }
 .thesis-right .item {
   display: flex;
-  padding: 1rem 1rem 1rem 0;
+  padding: 1rem;
 }
 .thesis-right .item img {
   height: 100%;
@@ -387,7 +372,6 @@ nav ul li {
 .thesis-right .item-text {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   margin-left: 1rem;
 }
@@ -395,16 +379,13 @@ nav ul li {
   padding-bottom: 1rem;
   line-height: 1.5rem;
 }
-.fisma {
-  background-color: lightgray;
-}
-/*               Responsiveness section for Thesis      */
+/* --------  Mobile Responsiveness for Thesis section -------- */
 @media screen and (max-width: 929px) {
   .thesis-main {
     margin: 0;
     padding-top: 2rem;
     padding-bottom: 1.5rem;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #327f8E;
   }
   .thesis-left {
     max-width: 100%;
@@ -416,12 +397,14 @@ nav ul li {
     padding-bottom: 1rem;
   }
 }
-/*              Footer Section              */
+/* ------------------- Footer Section ------------------ */
 footer {
-  border-top: 1px solid lightgray;
+  border-top: 1px solid #327f8E;
   padding: 1rem 1.5rem 4rem 1.5rem;
   display: flex;
   justify-content: space-between;
+  color: #EBFFEB;
+  background-color: #0b3239;
 }
 footer ul {
   display: flex;
@@ -430,6 +413,7 @@ footer ul {
 footer ul li {
   padding-left: 1rem;
 }
+/* --------  Mobile Responsiveness for Footer section -------- */
 @media screen and (max-width: 695px) {
   .closer {
     display: none;
