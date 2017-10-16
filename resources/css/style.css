@@ -23,13 +23,13 @@ p {
 /* ------------------- Multi-Section Code ------------------ */
 
 .banner, .learning, .fisma, .campus {
-  background-color: #327f8E;
+  background-color: #67BFD0;
 }
 .newyork,.info-right {
-  border-left: 1px solid #327f8E;
+  border-left: 1px solid #67BFD0;
 }
 .guest, .newyork{
-  border-bottom: 1px solid #327f8E;
+  border-bottom: 1px solid #67BFD0;
 }
 .course img, .logo img, .banner-img img, .info-left img {
   width: 100%;
@@ -44,11 +44,11 @@ header {
   height: 4rem;
   display: flex;
   justify-content: space-between;
-  background-color: white;
   align-items: center;
   position: fixed;
   z-index: 20;
   width: 100%;
+  background-color: #EBFFEB;
 }
 header span {
   color: #236773;
@@ -201,6 +201,9 @@ nav ul li {
 .orient {
   padding-top: 0;
 }
+.campus a {
+  color: #FFD8B2;
+}
 .info-text {
   padding: 0rem 1.5rem;
   max-width: 65%;
@@ -229,6 +232,7 @@ nav ul li {
   }
   .guest {
     background-color: inherit;
+    border-bottom: none;
   }
   .orient,.info-right {
     border: none;
@@ -274,14 +278,14 @@ nav ul li {
   align-items: center;
 }
 .course {
-  max-width: 30%;
+  width: 30%;
   margin: 1rem;
   color: #EBFFEB;
   background-color: #0b3239;
 }
 .course-text {
   padding: 1rem;
-  height: 8.5rem;
+  height: 8.75rem;
 }
 .course-text h3 {
   padding-bottom: .5rem;
